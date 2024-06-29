@@ -1,0 +1,67 @@
+
+CMD:django-admin startproject firstproject
+
+__init__.py
+Blank Python Script
+DJango will Consider the Particular folder as python package
+Settings.py
+Project settings, Configurations
+Project --> Applications
+Ex: SBI -->Mutual Fund,Banking App, Insurance App, Database Configurations middleware configurations
+
+urls.py:
+URL: dinakran.com/chennai
+url patterns will stored here
+
+wsgi.py: Web server Gateway Interface
+------
+This file is used when we deploy our application in Production server
+DEV Environment
+UAT User acceptance Test Environ ment
+
+asgi.py - Asynchronus
+Synchronus - Specific Area Refresh in Web Page not Complete Page
+---------------
+
+Mangae.py:
+running our server, running Apps,Creating migration
+
+python
+
+Runserver:
+CMD:python manage.py runserver
+URL: http://127.0.0.1:8000/
+
+
+web server:
+Providing Environment ro run web applications
+server is service provider : HTTP Request / HTTP Response
+
+Inside Server is many web components
+
+
+------------
+
+Create Web Applications: (Create New App)
+CMD:python manage.py startapp firstApp
+
+---------------
+admin.py --> admin interface  - DJango models
+apps.py
+models.py --> applications data models
+tests.py --> testing functions
+-------------------
+views.py: URL Informations 
+http://127.0.0.1/Wish
+
+Immediate use : views.py
+Migrations Folders is DB Specific Informations is there
+
+Ex : My Project is Many Applications is there so, which Application we need to run tell to Django
+
+goto settings.py
+Installed App Procedre add bellow App:
+'firstApp'
+
+-----------------
+

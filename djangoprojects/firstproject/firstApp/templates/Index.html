@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #c4dff5;  /* Light background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow for card */
+        }
+
+        .card-header {
+            border-bottom: none; /* Remove bottom border from card header */
+            background-color: #003289; /* Sea green background color */
+            color: #ffffff; /* White text color */
+        }
+
+        h3 {
+            margin: 0; /* Remove default margin */
+        }
+
+        .form-group {
+            margin-bottom: 10px; /* Reduce space between form groups */
+        }
+
+        .form-group label {
+            margin-bottom: 5px; /* Reduce space below labels */
+        }
+
+        .btn-primary {
+            background-color: #003289; /* Sea green background color for button */
+            border-color: #2E8B57; /* Sea green border color for button */
+        }
+
+        .btn-primary:hover {
+            background-color: #009c3c; /* Darker sea green on hover */
+            border-color: #000000; /* Darker sea green border on hover */
+        }
+
+        .container {
+            margin-top: 50px; /* Add space at the top */
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Petty Cash Entry</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="submit.php" method="post">
+                            <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input type="date" id="date" name="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="executive">Executive:</label>
+                                <input type="text" id="executive" name="executive" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="voucher_type">Voucher Type:</label>
+                                <select id="voucher_type" name="voucher_type" class="form-control" required>
+                                    <option value="payment">Payment</option>
+                                    <option value="receipt">Receipt</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount:</label>
+                                <input type="number" id="amount" name="amount" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="remarks">Remarks:</label>
+                                <textarea id="remarks" name="remarks" class="form-control" rows="2" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
